@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TipCalculator/ViewController.m"
-            timestampString = "529615604.092415"
+            timestampString = "529616793.003449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-textFieldDidBeginEditing:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-setupTextField:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
