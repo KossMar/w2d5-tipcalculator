@@ -11,7 +11,9 @@
 @interface ViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
+@property (weak, nonatomic) IBOutlet UITextField *percentageAmountTextField;
 @property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+
 
 @end
 
@@ -20,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.billAmountTextField.delegate = self;
+    self.percentageAmountTextField.delegate = self;
+
     
 }
 
@@ -31,12 +35,12 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     // clears the text
     NSLog(@"In textFieldDidBeginEditing:");
-    self.billAmountTextField.text = @"";
+    textField.text = @"";
 }
 
 - (IBAction)calculateTip:(id)sender {
     
-    float tip = [self.billAmountTextField.text floatValue] * 0.15;
+    float tip = [self.billAmountTextField.text floatValue] * ([self.percentageAmountTextField.text floatValue] * 0.01);
     NSString *tipString = [NSString stringWithFormat:@"%.02f",tip];
     self.tipAmountLabel.text = tipString;
 }
